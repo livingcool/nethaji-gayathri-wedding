@@ -174,6 +174,38 @@ if ('scrollRestoration' in history) {
 }
 window.scrollTo(0, 0);
 
+// Royal "Open Invitation" Gateway Handler
+const gateway = document.getElementById('invitation-gateway');
+const sealBtn = document.getElementById('gateway-seal-btn');
+let gatewayOpened = false;
+
+function openInvitation() {
+  if (gatewayOpened) return;
+  gatewayOpened = true;
+
+  // Play audio directly on user click gesture (100% allowed on all mobile browsers)
+  if (bgAudio) {
+    bgAudio.muted = false;
+    bgAudio.volume = 1.0;
+    bgAudio.play().catch(() => {});
+  }
+
+  // Smooth royal curtain dissolve
+  if (gateway) {
+    gateway.classList.add('gateway-closed');
+    setTimeout(() => {
+      gateway.style.display = 'none';
+    }, 800);
+  }
+}
+
+if (sealBtn) {
+  sealBtn.addEventListener('click', openInvitation);
+}
+if (gateway) {
+  gateway.addEventListener('click', openInvitation);
+}
+
 // Background Audio: Vaa Kannamma (Violin Version) — Instant auto-play without touching
 const bgAudio = document.getElementById('wedding-audio');
 let wasPlayingBeforeVideo = false;
