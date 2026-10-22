@@ -1698,19 +1698,25 @@ body.dialog-open {
 }
 
 .gateway-names {
-  font-size: clamp(34px, 6vw, 44px);
+  font-size: clamp(30px, 5.5vw, 44px);
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.15;
   color: var(--ink-primary);
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   letter-spacing: -0.5px;
 }
 
-.gateway-names span {
+.gateway-names .name-part {
+  white-space: nowrap;
+  font-style: normal;
+  color: var(--ink-primary);
+}
+
+.gateway-names .amp {
   font-style: italic;
   font-size: 0.85em;
   color: var(--gold-24k);
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 .gateway-date {

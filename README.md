@@ -1,4 +1,4 @@
-# Nethaji & Gayathri Wedding Website
+# Nethaji R & Gayathri V Wedding Website
 
 Complete editable static website, matching the Vercel deployment.
 
