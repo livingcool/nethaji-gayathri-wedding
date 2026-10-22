@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Local testing & verification screenshots
+screenshots/
+test-*.png
+*.png.tmp
+
+# Large raw backup assets
+assets_backup/
+assets_3d_backup/
+
+# Temporary directories and scripts
+temp_*
+tools/
+scripts/
+*.ps1
+.temp/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
